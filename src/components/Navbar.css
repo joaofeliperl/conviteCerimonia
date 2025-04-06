@@ -4,13 +4,12 @@
   box-sizing: border-box;
 }
 
-/* Se quiser remover margens do body especificamente */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Fonte local para o Navbar (exemplo) */
+/* Fonte local para o Navbar */
 @font-face {
   font-family: 'MinhaFonte';
   src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
@@ -23,33 +22,32 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* A navbar ocupa 100% da largura da tela */
   z-index: 999;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  /* Padding para o navbar */
   padding: 0.5rem 1rem;
-
-  background-color: #fff;  /* Mantém navbar branco */
-  
-  /* Remove a borda inferior e adiciona sombra */
+  background-color: #fff;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
-  
-  /* Usa a fonte local */
   font-family: 'MinhaFonte', sans-serif;
 }
 
-/* Logo à esquerda */
+/* Logo */
 .nav-logo {
   font-size: 2rem;
   color: #333;
   white-space: nowrap;
 }
 
-/* Lista de links à direita */
+/* Data (oculta por padrão) */
+.nav-date {
+  display: none;
+}
+
+/* Lista de links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -84,4 +82,61 @@ body {
 .confirm-button:hover {
   background-color: #333;
   color: #fff;
+}
+
+/* Ícone de menu hamburguer - escondido em telas grandes */
+.mobile-menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.mobile-menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  /* Exibe o ícone do menu hamburguer */
+  .mobile-menu-icon {
+    display: flex;
+  }
+
+  /* Exibe a data centralizada */
+  .nav-date {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem; /* Ajuste o tamanho conforme necessário */
+    color: #333;
+  }
+
+  /* Esconde os links inicialmente */
+  .nav-links {
+    position: absolute;
+    top: 60px; /* logo + padding da navbar */
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  /* Exibe os links quando o menu estiver aberto */
+  .nav-links.mobile-menu-open {
+    display: flex;
+  }
+  
+  /* Ajuste o tamanho dos links, se necessário */
+  .nav-links a,
+  .confirm-button {
+    font-size: 1.5rem;
+  }
 }

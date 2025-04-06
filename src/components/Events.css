@@ -15,12 +15,12 @@
 }
 
 /* Título "Programação" */
-/* Para aumentar o tamanho do título, ajuste o valor de font-size abaixo */
 .events h2 {
-  font-size: 3rem; /* Aumentado de 2.8rem para 3rem */
+  font-size: 3rem; /* Ajuste aqui para aumentar/diminuir o título principal */
   margin-bottom: 3rem;
   font-family: 'Lawrence', sans-serif;
   color: #344B68;
+  
 }
 
 /* Container para todos os eventos */
@@ -33,10 +33,10 @@
 .event {
   display: flex;
   font-family: 'Lawrence';
-  align-items: center;      /* Alinha verticalmente no meio */
-  justify-content: center;  /* Alinha horizontalmente no meio */
-  gap: 2rem;                /* Espaço entre texto e mapa */
-  margin-bottom: 3rem;      /* Espaço entre eventos */
+  align-items: flex-start;      /* Alinha os filhos no topo */
+  justify-content: center;      /* Mantém a centralização horizontal */
+  gap: 2rem;                   /* Espaço entre texto e mapa */
+  margin-bottom: 3rem;         /* Espaço entre eventos */
 }
 
 /* A cerimônia (texto-esquerda, mapa-direita) */
@@ -50,12 +50,12 @@
 }
 
 /* Texto (informações) */
-/* Para aumentar os tamanhos do texto neste bloco, ajuste os valores de font-size em .event-info h3, .event-date e .event-address */
 .event-info {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o bloco de texto */
-  text-align: center;  /* Centraliza o texto */
+  align-items: flex-start; /* Alinha o texto ao topo e à esquerda */
+  text-align: center;        /* Alinha o texto à esquerda */
+  margin-top: -40px;
 }
 
 /* Mapa + links */
@@ -65,39 +65,49 @@
   align-items: center; /* Centraliza o iframe e os links */
 }
 
+/* Aumentando o tamanho do mapa via CSS */
+/* Ajuste width/height aqui conforme desejar */
+.event-map iframe {
+  width: 400px;      /* Aumente ou diminua conforme necessário */
+  height: 250px;     /* Aumente ou diminua conforme necessário */
+  border: 0;
+  border-radius: 4px;
+}
+
 /* Título do evento */
-/* Para aumentar o tamanho do título do evento, ajuste o font-size abaixo */
 .event-info h3 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem; /* Aumentado de 2rem para 2.5rem */
+  font-family: 'Lawrence';
+  font-size: 2.5rem; 
   margin-bottom: 0.5rem;
   color: #344B68;
+  text-align: center; /* Centraliza o texto da data */
+  width: 100%;       
 }
 
 /* Data e hora */
-/* Para aumentar o tamanho da data/hora, ajuste o font-size abaixo */
 .event-date {
-  font-size: 1.2rem; /* Aumentado de 1.1rem para 1.2rem */
+  font-size: 1.5rem; 
   font-weight: bold;
   margin-bottom: 0.5rem;
+  text-align: center; /* Centraliza o texto da data */
+  width: 100%;       /* Faz com que a data ocupe toda a largura do container pai */
 }
 
 /* Endereço */
-/* Para aumentar o tamanho do endereço, ajuste o font-size neste seletor se necessário */
 .event-address {
-  font-size: 1.1rem; /* Adicionado para controle do tamanho, ajuste se necessário */
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   line-height: 1.4;
 }
 
 /* Links */
-/* Para aumentar o tamanho dos links, ajuste o font-size aqui se desejar */
 .event-links {
   margin-top: 1rem;
 }
 
+/* Ajuste aqui para aumentar/diminuir o tamanho do texto dos links */
 .event-links a {
-  font-size: 1.1rem; /* Adicionado para controle do tamanho, ajuste se necessário */
+  font-size: 1.5rem; 
   color: #274D66;
   text-decoration: none;
   font-weight: 600;
