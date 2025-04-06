@@ -13,7 +13,7 @@ body {
 /* Fonte local para o Navbar (exemplo) */
 @font-face {
   font-family: 'MinhaFonte';
-  src: url('../../public/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+  src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }

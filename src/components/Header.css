@@ -1,7 +1,7 @@
 /* Fonte local para o Header */
 @font-face {
     font-family: 'Lawrence';
-    src: url('../../public/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+    src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
@@ -12,7 +12,7 @@
     background-color: #FFFCF8;
   
     /* Imagem de fundo */
-    background-image: url('../../public/images/background.jpg');
+    background-image: url('../assets/images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;      /* Para preencher todo o espaço (corta um pouco se necessário) */
     background-position: top center; 
