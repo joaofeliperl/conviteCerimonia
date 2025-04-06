@@ -1,18 +1,109 @@
+/* Importação da fonte "Lawrence" */
+@font-face {
+  font-family: 'Lawrence';
+  src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Seção geral */
 .events {
-    padding: 2rem;
-    background-color: #faf3e0;
-    text-align: center;
-  }
-  
-  .event {
-    margin: 1rem 0;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1rem;
-  }
-  
-  .event h3 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
+  background-color: #FFFCF8;
+  padding: 3rem 1rem;
+  font-family: 'Lawrence';
+  text-align: center; /* Centraliza o título */
+}
+
+/* Título "Programação" */
+/* Para aumentar o tamanho do título, ajuste o valor de font-size abaixo */
+.events h2 {
+  font-size: 3rem; /* Aumentado de 2.8rem para 3rem */
+  margin-bottom: 3rem;
+  font-family: 'Lawrence', sans-serif;
+  color: #344B68;
+}
+
+/* Container para todos os eventos */
+.events-container {
+  max-width: 1200px; /* Largura máxima do container */
+  margin: 0 auto;    /* Centraliza horizontalmente */
+}
+
+/* Cada evento */
+.event {
+  display: flex;
+  font-family: 'Lawrence';
+  align-items: center;      /* Alinha verticalmente no meio */
+  justify-content: center;  /* Alinha horizontalmente no meio */
+  gap: 2rem;                /* Espaço entre texto e mapa */
+  margin-bottom: 3rem;      /* Espaço entre eventos */
+}
+
+/* A cerimônia (texto-esquerda, mapa-direita) */
+.event.normal {
+  flex-direction: row;
+}
+
+/* Festa Pós Cerimônia (mapa-esquerda, texto-direita) */
+.event.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Texto (informações) */
+/* Para aumentar os tamanhos do texto neste bloco, ajuste os valores de font-size em .event-info h3, .event-date e .event-address */
+.event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o bloco de texto */
+  text-align: center;  /* Centraliza o texto */
+}
+
+/* Mapa + links */
+.event-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o iframe e os links */
+}
+
+/* Título do evento */
+/* Para aumentar o tamanho do título do evento, ajuste o font-size abaixo */
+.event-info h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem; /* Aumentado de 2rem para 2.5rem */
+  margin-bottom: 0.5rem;
+  color: #344B68;
+}
+
+/* Data e hora */
+/* Para aumentar o tamanho da data/hora, ajuste o font-size abaixo */
+.event-date {
+  font-size: 1.2rem; /* Aumentado de 1.1rem para 1.2rem */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Endereço */
+/* Para aumentar o tamanho do endereço, ajuste o font-size neste seletor se necessário */
+.event-address {
+  font-size: 1.1rem; /* Adicionado para controle do tamanho, ajuste se necessário */
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Links */
+/* Para aumentar o tamanho dos links, ajuste o font-size aqui se desejar */
+.event-links {
+  margin-top: 1rem;
+}
+
+.event-links a {
+  font-size: 1.1rem; /* Adicionado para controle do tamanho, ajuste se necessário */
+  color: #274D66;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+
+.event-links a:hover {
+  text-decoration: underline;
+}
