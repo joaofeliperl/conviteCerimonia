@@ -1,0 +1,14 @@
+.header {
+    background-image: url('../../public/images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #141414;
+  }
+  .hero {
+    text-align: center;
+  }
+  

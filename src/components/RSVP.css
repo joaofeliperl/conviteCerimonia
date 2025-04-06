@@ -1,0 +1,19 @@
+.rsvp {
+    padding: 2rem;
+    text-align: center;
+  }
+  .rsvp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .rsvp input[type="text"] {
+    padding: 0.5rem;
+    width: 200px;
+  }
+  .rsvp button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
