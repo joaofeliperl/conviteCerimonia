@@ -22,7 +22,6 @@ code {
 @media (max-width: 768px) {
   .nav-links.mobile-menu-open {
     display: flex;
-    border: 2px solid red; /* temporário para visualização */
   }
 }
 

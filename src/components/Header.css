@@ -1,55 +1,124 @@
-/* Fonte local para o Header */
+/* Importação da fonte "Lawrence" */
 @font-face {
-    font-family: 'Lawrence';
-    src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Container do header */
-  .header {
-    /* Atualiza a cor de fundo para #FFFCF8 */
-    background-color: #FFFCF8;
-  
-    /* Imagem de fundo */
-    background-image: url('../assets/images/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;      /* Para preencher todo o espaço (corta um pouco se necessário) */
-    background-position: top center; 
-  
-    /* Aumenta o height do header alterando a min-height para 120vh (ajuste conforme desejado) */
-    min-height: 70vh;
-  
-    /* Remove padding-top para que a imagem inicie no topo */
-    padding-top: 0;
-  
-    /* Centraliza qualquer conteúdo direto no .header */
-    text-align: center;
-    position: relative;
-  }
-  
+  font-family: 'Lawrence';
+  src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Container do header */
+.header {
+  /* Atualiza a cor de fundo para #FFFCF8 */
+  background-color: #FFFCF8;
+
+  /* Imagem de fundo */
+  background-image: url('../assets/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* Para preencher todo o espaço (corta um pouco se necessário) */
+  background-position: top center; /* Imagem começa no topo e centralizada horizontalmente */
+
+  /* Aumenta o height do header alterando a min-height para 120vh (ajuste conforme desejado) */
+  min-height: 70vh;
+
+  /* Remove padding-top para que a imagem inicie no topo */
+  padding-top: 0;
+
+  /* Centraliza qualquer conteúdo direto no .header */
+  text-align: center;
+  position: relative;
+}
+
+.hero {
+  padding-top: 250px; 
+
+  font-family: 'Lawrence', sans-serif;
+  color: #274D66;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título (Felipe & Esther) */
+.hero h1 {
+  font-size: 5.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: #344B68;
+}
+
+/* Subtítulo (data, local, etc.) */
+.hero p {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 1.7rem;
+}
+
+/* ---------------- Responsive ---------------- */
+
+/* Para telas com largura até 1024px */
+@media (max-width: 1024px) {
   .hero {
-    padding-top: 250px; 
-  
-    font-family: 'Lawrence', sans-serif;
-    color: #274D66;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+      padding-top: 180px; /* Reduz o padding superior */
+      max-width: 90%;
   }
-  
-  /* Título (Felipe & Esther) */
+
   .hero h1 {
-    font-size: 5.5rem;
-    margin: 0;
-    margin-bottom: 0.5rem;
-    color: #344B68;
+      font-size: 5rem;
   }
-  
-  /* Subtítulo (data, local, etc.) */
+
   .hero p {
-    margin: 0;
-    margin-top: 0.5rem;
-    font-size: 1.7rem;
+      font-size: 1.6rem;
   }
-  
+
+  /* Ajusta o posicionamento da imagem para telas menores */
+  .header {
+      background-size: contain; /* Ajuste a imagem para se ajustar dentro da tela */
+      background-position: top center; /* A imagem vai se alinhar mais para o topo */
+  }
+}
+
+/* Para telas com largura até 768px */
+@media (max-width: 768px) {
+  .hero {
+      padding-top: 120px; /* Ajuste o padding superior para começar mais próximo da navbar */
+      max-width: 90%;
+  }
+
+  .hero h1 {
+      font-size: 4.5rem; /* Tamanho menor para o título */
+  }
+
+  .hero p {
+      font-size: 1.4rem; /* Tamanho menor para o subtítulo */
+  }
+
+  /* Ajuste o padding-top para começar abaixo da navbar */
+  .header {
+      padding-top: 0; /* Remover espaço excessivo */
+      background-size: contain; /* Ajuste a imagem para se ajustar dentro da tela */
+      background-position: top center; /* Coloca a imagem mais para cima */
+  }
+}
+
+/* Para telas com largura até 480px */
+@media (max-width: 480px) {
+  .hero {
+      padding-top: 80px; /* Ajuste o valor para não causar excesso de espaço */
+      max-width: 95%;
+  }
+
+  .hero h1 {
+      font-size: 3.5rem; /* Título ajustado para dispositivos muito pequenos */
+  }
+
+  .hero p {
+      font-size: 1.2rem; /* Subtítulo ajustado para melhor visualização */
+  }
+
+  /* Ajusta o padding-top para começar abaixo da navbar */
+  .header {
+      padding-top: 0; /* Remover o espaço extra abaixo da navbar */
+      background-size: contain; /* Ajuste a imagem para se ajustar dentro da tela */
+      background-position: top center; /* A imagem começa mais para cima */
+  }
+}

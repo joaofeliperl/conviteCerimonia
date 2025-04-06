@@ -11,32 +11,32 @@
   background-color: #FFFCF8;
   padding: 3rem 1rem;
   font-family: 'Lawrence';
-  text-align: center; /* Centraliza o título */
+  text-align: center;
 }
 
 /* Título "Programação" */
 .events h2 {
-  font-size: 3rem; /* Ajuste aqui para aumentar/diminuir o título principal */
+  font-size: 3rem;
   margin-bottom: 3rem;
   font-family: 'Lawrence', sans-serif;
   color: #344B68;
-  
 }
 
 /* Container para todos os eventos */
 .events-container {
-  max-width: 1200px; /* Largura máxima do container */
-  margin: 0 auto;    /* Centraliza horizontalmente */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Cada evento */
 .event {
   display: flex;
   font-family: 'Lawrence';
-  align-items: flex-start;      /* Alinha os filhos no topo */
-  justify-content: center;      /* Mantém a centralização horizontal */
-  gap: 2rem;                   /* Espaço entre texto e mapa */
-  margin-bottom: 3rem;         /* Espaço entre eventos */
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-direction: row; /* Manter a direção original para telas grandes */
 }
 
 /* A cerimônia (texto-esquerda, mapa-direita) */
@@ -53,8 +53,8 @@
 .event-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha o texto ao topo e à esquerda */
-  text-align: center;        /* Alinha o texto à esquerda */
+  align-items: flex-start;
+  text-align: center;
   margin-top: -40px;
 }
 
@@ -62,14 +62,13 @@
 .event-map {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o iframe e os links */
+  align-items: center;
 }
 
-/* Aumentando o tamanho do mapa via CSS */
-/* Ajuste width/height aqui conforme desejar */
+/* Ajuste do mapa */
 .event-map iframe {
-  width: 400px;      /* Aumente ou diminua conforme necessário */
-  height: 250px;     /* Aumente ou diminua conforme necessário */
+  width: 100%;
+  height: 250px;
   border: 0;
   border-radius: 4px;
 }
@@ -77,20 +76,20 @@
 /* Título do evento */
 .event-info h3 {
   font-family: 'Lawrence';
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: #344B68;
-  text-align: center; /* Centraliza o texto da data */
-  width: 100%;       
+  text-align: center;
+  width: 100%;
 }
 
 /* Data e hora */
 .event-date {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  text-align: center; /* Centraliza o texto da data */
-  width: 100%;       /* Faz com que a data ocupe toda a largura do container pai */
+  text-align: center;
+  width: 100%;
 }
 
 /* Endereço */
@@ -105,9 +104,8 @@
   margin-top: 1rem;
 }
 
-/* Ajuste aqui para aumentar/diminuir o tamanho do texto dos links */
 .event-links a {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: #274D66;
   text-decoration: none;
   font-weight: 600;
@@ -116,4 +114,91 @@
 
 .event-links a:hover {
   text-decoration: underline;
+}
+
+/* Media Queries para tornar o layout responsivo */
+
+/* Em telas pequenas (como smartphones) */
+@media (max-width: 768px) {
+  .events {
+      padding: 2rem 1rem;
+  }
+
+  .events h2 {
+      font-size: 2.5rem;
+  }
+
+  .event {
+      flex-direction: column;  /* Coloca os eventos em coluna */
+      align-items: center;     /* Centraliza os eventos */
+      gap: 2rem;               /* Reduz o espaço entre os eventos */
+  }
+
+  .event-info {
+      margin-top: 0;  /* Remove o deslocamento superior do texto */
+  }
+
+  .event-map iframe {
+      height: 200px;  /* Reduz a altura do mapa em telas pequenas */
+  }
+
+  .event-info h3 {
+      font-size: 2rem;  /* Ajusta o tamanho do título do evento */
+  }
+
+  .event-date {
+      font-size: 1.3rem;  /* Reduz o tamanho da data */
+  }
+
+  .event-address {
+      font-size: 1.3rem;  /* Ajuste de tamanho de fonte do endereço */
+  }
+
+  .event-links a {
+      font-size: 1.3rem;  /* Ajuste de tamanho de fonte dos links */
+  }
+
+  /* Força o layout a empilhar os itens em telas pequenas */
+  .event {
+      flex-direction: column; /* Empilha o texto e o mapa em coluna */
+      align-items: center;    /* Centraliza os itens empilhados */
+  }
+
+  /* Adiciona um espaçamento para alternar texto e mapa */
+  .event-info {
+      margin-bottom: 2rem;  /* Espaçamento entre o texto e o mapa */
+  }
+}
+
+/* Em telas extra pequenas (como celulares em retrato) */
+@media (max-width: 480px) {
+  .events h2 {
+      font-size: 2rem;
+  }
+
+  .event-info h3 {
+      font-size: 1.8rem;  /* Ajusta ainda mais o tamanho do título */
+  }
+
+  .event-date {
+      font-size: 1.2rem;  /* Ajusta ainda mais o tamanho da data */
+  }
+
+  .event-address {
+      font-size: 1.2rem;  /* Ajuste de tamanho de fonte do endereço */
+  }
+
+  .event-links a {
+      font-size: 1.2rem;  /* Ajuste de tamanho de fonte dos links */
+  }
+
+  /* Empilha texto e mapa, com um espaçamento entre eles */
+  .event {
+      flex-direction: column; /* Empilha os itens */
+      align-items: center;    /* Centraliza os itens empilhados */
+  }
+
+  .event-info {
+      margin-bottom: 1rem; /* Adiciona margem entre o texto e o mapa */
+  }
 }

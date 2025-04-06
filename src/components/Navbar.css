@@ -1,3 +1,8 @@
+/* Evita overflow horizontal */
+html, body {
+  overflow-x: hidden;
+}
+
 /* Reset básico para remover margens/paddings padrão */
 * {
   padding: 0;
@@ -22,13 +27,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* A navbar ocupa 100% da largura da tela */
+  width: 100vw; /* Usa 100vw para garantir que não ultrapasse a viewport */
   z-index: 999;
-
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  
   padding: 0.5rem 1rem;
   background-color: #fff;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
@@ -100,43 +105,61 @@ body {
 
 /* Media Query para telas menores */
 @media (max-width: 768px) {
+  /* Reduz o padding da navbar para caber melhor na tela */
+  .navbar {
+    padding: 0.5rem;
+    width: 100vw; /* Garante que a navbar não extrapola a largura da viewport */
+  }
+  
+  /* Reduz o tamanho da logo */
+  .nav-logo {
+    font-size: 1.8rem;
+  }
+  
   /* Exibe o ícone do menu hamburguer */
   .mobile-menu-icon {
     display: flex;
   }
-
-  /* Exibe a data centralizada */
+  
+  /* Exibe a data centralizada vertical e horizontalmente */
   .nav-date {
     display: block;
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem; /* Ajuste o tamanho conforme necessário */
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
     color: #333;
   }
-
-  /* Esconde os links inicialmente */
+  
+  /* Ajusta os links para ficarem menores e com menos espaçamento */
   .nav-links {
-    position: absolute;
-    top: 60px; /* logo + padding da navbar */
-    right: 0;
+    position: fixed;
+    top: 60px; /* Espaço suficiente para a navbar */
+    left: 0;
+    width: 100vw; /* Usa 100vw para evitar overflow horizontal */
     background-color: #fff;
     flex-direction: column;
-    width: 100%;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
     display: none;
+    z-index: 998;
   }
-
+  
   /* Exibe os links quando o menu estiver aberto */
   .nav-links.mobile-menu-open {
     display: flex;
   }
   
-  /* Ajuste o tamanho dos links, se necessário */
+  /* Reduz o tamanho dos links e do botão */
   .nav-links a,
   .confirm-button {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Adiciona espaçamento superior ao conteúdo principal quando o menu está aberto */
+  body.mobile-menu-open {
+    padding-top: 220px; /* Ajuste dependendo da altura da navbar quando aberta */
   }
 }

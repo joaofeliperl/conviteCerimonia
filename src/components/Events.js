@@ -27,7 +27,7 @@ function Events() {
               width="300"
               height="200"
               style={{ border: 0, borderRadius: '4px' }}
-              allowFullScreen=""
+              allowFullScreen="true"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -75,7 +75,7 @@ function Events() {
               width="300"
               height="200"
               style={{ border: 0, borderRadius: '4px' }}
-              allowFullScreen=""
+              allowFullScreen="true"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

@@ -1,8 +1,10 @@
+/* Estilo para o componente de contagem regressiva */
 .countdown {
   margin-top: 10rem;      /* Espaçamento superior opcional */
-  color: #274D66;        /* Cor principal do texto */
+  color: #274D66;         /* Cor principal do texto */
 }
 
+/* Título da contagem */
 .countdown-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -32,4 +34,67 @@
 .label {
   font-size: 1.5rem;
   color: #555;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .countdown {
+    margin-top: 5rem;  /* Reduz o espaço superior em telas menores */
+  }
+
+  /* Ajusta o tamanho do título */
+  .countdown-title {
+    font-size: 1.2rem;
+  }
+
+  /* Mantém os itens em linha mesmo em telas menores */
+  .countdown-items {
+    gap: 2rem; /* Reduz o espaço entre os itens */
+    flex-wrap: nowrap; /* Garante que os itens fiquem lado a lado */
+  }
+
+  .countdown-item {
+    flex-direction: column; /* Organiza os itens em coluna (número em cima, rótulo embaixo) */
+  }
+
+  /* Ajusta o tamanho das fontes */
+  .number {
+    font-size: 2.5rem;  /* Reduz o tamanho do número */
+  }
+
+  .label {
+    font-size: 1.2rem;  /* Reduz o tamanho do rótulo */
+  }
+}
+
+/* Media Query para telas extra pequenas */
+@media (max-width: 480px) {
+  .countdown {
+    margin-top: 3rem;  /* Ajusta o espaço superior para telas muito pequenas */
+  }
+
+  /* Ajusta o tamanho do título */
+  .countdown-title {
+    font-size: 1rem;
+  }
+
+  /* Mantém os itens em linha para telas extra pequenas */
+  .countdown-items {
+    gap: 1.5rem;               /* Reduz o espaço entre os itens */
+    flex-wrap: nowrap;          /* Garante que os itens fiquem lado a lado */
+  }
+
+  .countdown-item {
+    flex-direction: column; /* Mantém a disposição em coluna */
+  }
+
+  /* Ajuste de tamanho para os números */
+  .number {
+    font-size: 2rem;  /* Reduz ainda mais o tamanho do número */
+  }
+
+  /* Ajuste de tamanho para os rótulos */
+  .label {
+    font-size: 1rem;  /* Reduz ainda mais o tamanho do rótulo */
+  }
 }

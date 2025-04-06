@@ -1,35 +1,79 @@
+/* Seção de contagem regressiva */
 .countdown-section {
-    width: 100%;
-    background-color: #FFFCF8;  /* Fundo desejado */
-    text-align: center;
-    padding: 3rem 1rem;         /* Espaçamento interno */
-    color: #3F6F90;             /* Cor principal do texto */
-    box-sizing: border-box;
-    font-family: 'Lawrence', sans-serif;  /* Aplica a fonte importada */
+  width: 100%;
+  background-color: #FFFCF8;  /* Fundo desejado */
+  text-align: center;
+  padding: 3rem 1rem;         /* Espaçamento interno */
+  color: #3F6F90;             /* Cor principal do texto */
+  box-sizing: border-box;
+  font-family: 'Lawrence', sans-serif;  /* Aplica a fonte importada */
+}
+
+/* Título da seção */
+.countdown-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Parágrafos da seção */
+.countdown-section p {
+  max-width: 900px;           /* Limita a largura do texto */
+  margin: 0 auto 1rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* Estilo da assinatura */
+.signature {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* Estilo para o componente de contagem (se o CountdownTimer utiliza a classe .countdown) */
+.countdown {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #555;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .countdown-section {
+    padding: 1.5rem 1rem; /* Reduz o padding superior em telas pequenas */
   }
-  
+
+  /* Ajusta o tamanho do título para telas menores */
   .countdown-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;  /* Reduz o tamanho do título */
   }
-  
+
+  /* Ajusta o tamanho do texto nos parágrafos para telas menores */
   .countdown-section p {
-    max-width: 900px;           /* Limita a largura do texto */
-    margin: 0 auto 1rem;
-    line-height: 1.5;
-    font-size: 1.5rem;
-    color:black; 
+    font-size: 1.2rem;  /* Reduz o tamanho da fonte */
   }
-  
-  .signature {
-    font-style: italic;
-    margin-bottom: 2rem;
-  }
-  
-  /* Estilo para o componente de contagem (se o CountdownTimer utiliza a classe .countdown) */
+
+  /* Ajusta o tamanho da contagem regressiva para telas menores */
   .countdown {
-    font-size: 2rem;
-    margin-top: 1rem;
-    color: #555;
+    font-size: 1.5rem;  /* Reduz o tamanho da fonte da contagem regressiva */
   }
-  
+}
+
+/* Media Query para telas extra pequenas */
+@media (max-width: 480px) {
+  .countdown-section {
+    padding: 1rem 1rem;  /* Reduz o padding ainda mais para telas muito pequenas */
+  }
+
+  .countdown-section h2 {
+    font-size: 1.8rem;  /* Ajusta o título para telas ainda menores */
+  }
+
+  .countdown-section p {
+    font-size: 1rem;  /* Ajuste de tamanho de fonte nos parágrafos */
+  }
+
+  .countdown {
+    font-size: 1.2rem;  /* Ajusta o tamanho da contagem regressiva */
+  }
+}
