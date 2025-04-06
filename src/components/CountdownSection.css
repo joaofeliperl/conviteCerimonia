@@ -1,0 +1,35 @@
+.countdown-section {
+    width: 100%;
+    background-color: #FFFCF8;  /* Fundo desejado */
+    text-align: center;
+    padding: 3rem 1rem;         /* Espaçamento interno */
+    color: #3F6F90;             /* Cor principal do texto */
+    box-sizing: border-box;
+    font-family: 'Lawrence', sans-serif;  /* Aplica a fonte importada */
+  }
+  
+  .countdown-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .countdown-section p {
+    max-width: 900px;           /* Limita a largura do texto */
+    margin: 0 auto 1rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color:black; 
+  }
+  
+  .signature {
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  /* Estilo para o componente de contagem (se o CountdownTimer utiliza a classe .countdown) */
+  .countdown {
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: #555;
+  }
+  

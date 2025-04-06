@@ -1,14 +1,55 @@
-.header {
-    background-image: url('../../public/images/background.jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #141414;
+/* Fonte local para o Header */
+@font-face {
+    font-family: 'Lawrence';
+    src: url('../../public/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
   }
-  .hero {
+  
+  /* Container do header */
+  .header {
+    /* Atualiza a cor de fundo para #FFFCF8 */
+    background-color: #FFFCF8;
+  
+    /* Imagem de fundo */
+    background-image: url('../../public/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;      /* Para preencher todo o espaço (corta um pouco se necessário) */
+    background-position: top center; 
+  
+    /* Aumenta o height do header alterando a min-height para 120vh (ajuste conforme desejado) */
+    min-height: 70vh;
+  
+    /* Remove padding-top para que a imagem inicie no topo */
+    padding-top: 0;
+  
+    /* Centraliza qualquer conteúdo direto no .header */
     text-align: center;
+    position: relative;
+  }
+  
+  .hero {
+    padding-top: 250px; 
+  
+    font-family: 'Lawrence', sans-serif;
+    color: #274D66;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Título (Felipe & Esther) */
+  .hero h1 {
+    font-size: 5.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    color: #344B68;
+  }
+  
+  /* Subtítulo (data, local, etc.) */
+  .hero p {
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 1.7rem;
   }
   

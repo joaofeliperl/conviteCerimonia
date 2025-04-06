@@ -6,8 +6,7 @@ function Header() {
     <header className="header">
       <div className="hero">
         <h1>Felipe & Esther</h1>
-        <p>Nosso Casamento</p>
-        <p>Data: 25 de Dezembro de 2025</p>
+        <p>Manaus. 17 Maio 2025</p>
       </div>
     </header>
   );

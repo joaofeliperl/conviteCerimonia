@@ -1,9 +1,18 @@
 .events {
     padding: 2rem;
-    background: #f9f9f9;
+    background-color: #faf3e0;
     text-align: center;
   }
+  
   .event {
     margin: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+  
+  .event h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
   

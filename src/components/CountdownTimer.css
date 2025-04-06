@@ -1,0 +1,35 @@
+.countdown {
+  margin-top: 10rem;      /* Espaçamento superior opcional */
+  color: #274D66;        /* Cor principal do texto */
+}
+
+.countdown-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Container que agrupa cada item (dias, horas, minutos) */
+.countdown-items {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 3rem;              /* Espaço entre cada bloco */
+}
+
+/* Cada bloco individual (ex.: "40" + "dias") */
+.countdown-item {
+  display: flex;
+  flex-direction: column; /* Número em cima, texto embaixo */
+  align-items: center;
+}
+
+/* O número em destaque */
+.number {
+  font-size: 3rem;
+  color: #274D66;
+}
+
+/* O rótulo (dias, horas, minutos) */
+.label {
+  font-size: 1.5rem;
+  color: #555;
+}
