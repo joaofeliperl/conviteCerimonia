@@ -186,15 +186,18 @@ body {
 }
 
 /* Overlay para escurecer o fundo quando o menu mobile estiver aberto */
-body.mobile-menu-open::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
-  /* Ajuste a opacidade conforme desejado */
-  z-index: 990;
-  pointer-events: none;
+/* Essa regra será aplicada somente em telas menores */
+@media (max-width: 768px) {
+  body.mobile-menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    /* Ajuste a opacidade conforme desejado */
+    z-index: 990;
+    pointer-events: none;
+  }
 }

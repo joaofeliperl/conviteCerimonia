@@ -23,7 +23,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* Botão de controle para Play/Pause */}
       <MusicControl playing={musicPlaying} onToggle={toggleMusic} />
       <Header />
       <CountdownSection />
@@ -32,6 +31,7 @@ function App() {
       <Confirmacao />
       <GiftList />
       <Footer />
+      {musicPlaying}
     </div>
   );
 }
