@@ -92,7 +92,7 @@
     background-color: #bbb;
 }
 
-/* Responsividade */
+/* Responsividade para telas menores (até 768px) */
 @media (max-width: 768px) {
     .dialog {
         width: 95%;
@@ -112,5 +112,30 @@
 
     .qr-code img {
         width: 150px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+    .dialog {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .dialog h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .dialog p,
+    .link-area input,
+    .link-area button,
+    .dialog-close-button {
+        font-size: 0.9rem;
+    }
+
+    /* O QR code ocupará 100% da largura do contêiner, mas não excederá 300px */
+    .qr-code img {
+        width: 100%;
+        max-width: 250px;
     }
 }

@@ -19,7 +19,6 @@ function GiftDialog({ gift, onClose }) {
         <div className="dialog-overlay">
             <div className="dialog">
                 <h2>Presentear: {gift.title}</h2>
-                <p>Abaixo, você pode fazer sua doação via Pix:</p>
                 <div className="qr-code">
                     <img src={qrImage} alt="QR Code Pix" />
                 </div>
