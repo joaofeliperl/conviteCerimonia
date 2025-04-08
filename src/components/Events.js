@@ -3,9 +3,9 @@ import './Events.css';
 
 function Events() {
   return (
-    <section className="events">
+    <section id="programacao" className="events">
       <h2>Programação</h2>
-      
+
       <div className="events-container">
         {/* Evento: A cerimônia (texto-esquerda, mapa-direita) */}
         <div className="event normal">
@@ -14,11 +14,11 @@ function Events() {
             <h3>A cerimônia</h3>
             <p className="event-date">17 de Maio de 2025 - 10h00</p>
             <p className="event-address">
-              8º Registro Civil das Pessoas Naturais, <br />
-              Avenida Constantino Nery, 999 - Chapada, Manaus - AM
+              8º Registro Civil, <br />
+              Av. Constantino Nery, 3872 - Chapada
             </p>
           </div>
-          
+
           {/* Mapa + Botões */}
           <div className="event-map">
             <iframe
@@ -60,10 +60,10 @@ function Events() {
           {/* Texto (vem primeiro no HTML, mas aparecerá à direita visualmente) */}
           <div className="event-info">
             <h3>Festa Pós Cerimônia</h3>
-            <p className="event-date">17 de Maio de 2025 - 12h00</p>
+            <p className="event-date">17 de Maio de 2025 - 11h30</p>
             <p className="event-address">
-              La Parrilla Grill, <br />
-              Rua Exemplo, 123, Bairro Modelo, Manaus - AM
+              La Parrilla Grill, Franceses <br />
+              Av. Des. João Machado, 63 - Alvorada
             </p>
           </div>
 
@@ -98,6 +98,11 @@ function Events() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Bloco com a nova informação */}
+      <div className="event-extra-info">
+        <p>O consumo será individual, mas a alegria de tê-los conosco não tem preço!</p>
       </div>
     </section>
   );

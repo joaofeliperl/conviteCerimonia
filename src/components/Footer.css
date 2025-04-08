@@ -1,0 +1,39 @@
+/* Importa a fonte utilizada na Navbar para manter a harmonia */
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Estilo principal para o Footer */
+.footer {
+    background-color: #FFFCF8;
+    /* Cor de fundo desejada */
+    padding: 1rem 2rem;
+    text-align: center;
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+/* Container centralizado, semelhante ao usado na Navbar */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Texto do Footer */
+.footer-text {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Responsividade similar à Navbar */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1rem;
+    }
+
+    .footer-text {
+        font-size: 1rem;
+    }
+}

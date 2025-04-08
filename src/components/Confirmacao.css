@@ -1,0 +1,68 @@
+/* Importação da fonte "Lawrence" */
+@font-face {
+    font-family: 'Lawrence';
+    src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo principal para a seção de Confirmação */
+.confirmacao {
+    background-color: #D7E8ED;
+    /* Mesma cor de fundo */
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Lawrence';
+}
+
+/* Container para centralizar o conteúdo */
+.confirmacao-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título da seção */
+.confirmacao h2 {
+    font-size: 2.5rem;
+    color: #344B68;
+    margin-bottom: 1.5rem;
+    font-family: 'Lawrence';
+}
+
+/* Container dos botões */
+.confirmacao-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Estilo para os botões */
+.confirmacao-buttons button {
+    background-color: #3F6F90;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Lawrence';
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover para os botões */
+.confirmacao-buttons button:hover {
+    background-color: #34536f;
+    /* Cor um pouco mais escura para indicar interação */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .confirmacao-buttons {
+        flex-direction: column;
+    }
+
+    .confirmacao-buttons button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

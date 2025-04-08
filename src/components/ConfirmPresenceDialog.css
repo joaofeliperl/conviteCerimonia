@@ -1,0 +1,251 @@
+/* Importa a fonte local para manter a harmonia com a Navbar */
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Overlay semi-transparente cobrindo a tela */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Container do modal */
+.modal {
+    background-color: #FFFCF8;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+/* Título do modal */
+.modal h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Opções de presença (radio buttons) */
+.attendance-options {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.attendance-options label {
+    margin: 0 1rem;
+}
+
+/* Seção para adicionar nomes */
+.names-list {
+    margin: 1rem 0;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.names-list h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.add-name {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-name input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para o input quando desabilitado */
+.add-name input:disabled {
+    background-color: #e0e0e0;
+    /* Cinza claro */
+    color: #888;
+    cursor: not-allowed;
+}
+
+.add-name button {
+    padding: 0.5rem 1rem;
+    background-color: #3F6F90;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-name button:hover {
+    background-color: #34536f;
+}
+
+/* Estilos para o botão "Adicionar" quando desabilitado */
+.add-name button:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Lista de nomes */
+.names-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.names-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    padding: 0.2rem 0;
+    font-size: 1.2rem;
+}
+
+.names-list li button {
+    background-color: transparent;
+    border: none;
+    color: #d00;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Ações do modal (botões de fechar e enviar) */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.close-button,
+.send-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: 'MinhaFonte', sans-serif;
+    flex: 1;
+}
+
+.close-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+.send-button {
+    background-color: #3F6F90;
+    color: #fff;
+}
+
+.close-button:hover {
+    background-color: #bbb;
+}
+
+.send-button:hover {
+    background-color: #34536f;
+}
+
+/* Estilos para o botão "Confirmar Presença" quando desabilitado */
+.send-button:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .attendance-options {
+        font-size: 1.1rem;
+        margin: 0.8rem 0;
+    }
+
+    .attendance-options label {
+        margin: 0 0.5rem;
+    }
+
+    .add-name input {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+
+    .add-name button {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .names-list h3 {
+        font-size: 1.4rem;
+    }
+
+    .names-list li {
+        font-size: 1rem;
+    }
+
+    .close-button,
+    .send-button {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .modal h2 {
+        font-size: 2rem;
+    }
+
+    .attendance-options {
+        font-size: 1rem;
+    }
+
+    .add-name input {
+        font-size: 0.9rem;
+    }
+
+    .add-name button {
+        font-size: 0.9rem;
+    }
+
+    .names-list h3 {
+        font-size: 1.2rem;
+    }
+
+    .names-list li {
+        font-size: 0.9rem;
+    }
+
+    .close-button,
+    .send-button {
+        font-size: 1rem;
+    }
+}

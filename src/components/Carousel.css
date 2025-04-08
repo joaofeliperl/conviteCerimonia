@@ -1,0 +1,76 @@
+.carousel {
+    position: relative;
+    /* Para telas menores (padrão): ocupa 80% da largura com até 800px */
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+/* Em telas maiores, reduz um pouco o tamanho do carrossel */
+@media (min-width: 769px) {
+    .carousel {
+        /* Ajusta para 60% e max-width de 600px para que fique menor em relação à tela */
+        width: 60%;
+        max-width: 600px;
+    }
+}
+
+/* Cada slide ocupa 100% da largura do contêiner */
+.carousel-item {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Slide ativo */
+.carousel-item.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Botões de navegação */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro translúcido */
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .carousel-button {
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

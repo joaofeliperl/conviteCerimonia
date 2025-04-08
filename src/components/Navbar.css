@@ -1,5 +1,6 @@
 /* Evita overflow horizontal */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -27,13 +28,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Usa 100vw para garantir que não ultrapasse a viewport */
+  width: 100vw;
+  /* Usa 100vw para garantir que não ultrapasse a viewport */
   z-index: 999;
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   padding: 0.5rem 1rem;
   background-color: #fff;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
@@ -43,6 +45,7 @@ body {
 /* Logo */
 .nav-logo {
   font-size: 2rem;
+  /* Mantém o tamanho da logo */
   color: #333;
   white-space: nowrap;
 }
@@ -60,12 +63,13 @@ body {
   gap: 2rem;
 }
 
-/* Links */
+/* Links padrão da Navbar */
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  /* Aumentado de 1.2rem para 1.4rem para melhor legibilidade */
   transition: color 0.3s ease;
 }
 
@@ -73,14 +77,16 @@ body {
   color: #666;
 }
 
-/* Botão de confirmação de presença */
+/* Botão de confirmação de presença (tamanho reduzido) */
 .confirm-button {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
+  /* Padding reduzido */
   border: 2px solid #333;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
   font-size: 1.2rem;
+  /* Fonte reduzida de 1.4rem para 1.2rem */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -105,22 +111,24 @@ body {
 
 /* Media Query para telas menores */
 @media (max-width: 768px) {
+
   /* Reduz o padding da navbar para caber melhor na tela */
   .navbar {
     padding: 0.5rem;
-    width: 100vw; /* Garante que a navbar não extrapola a largura da viewport */
+    width: 100vw;
+    /* Garante que a navbar não extrapola a largura da viewport */
   }
-  
+
   /* Reduz o tamanho da logo */
   .nav-logo {
     font-size: 1.8rem;
   }
-  
+
   /* Exibe o ícone do menu hamburguer */
   .mobile-menu-icon {
     display: flex;
   }
-  
+
   /* Exibe a data centralizada vertical e horizontalmente */
   .nav-date {
     display: block;
@@ -131,14 +139,17 @@ body {
     font-size: 1rem;
     color: #333;
   }
-  
+
   /* Ajusta os links para ficarem menores e com menos espaçamento */
   .nav-links {
     position: fixed;
-    top: 60px; /* Espaço suficiente para a navbar */
+    top: 60px;
+    /* Espaço suficiente para a navbar */
     left: 0;
-    width: 100vw; /* Usa 100vw para evitar overflow horizontal */
+    width: 100vw;
+    /* Usa 100vw para evitar overflow horizontal */
     background-color: #fff;
+    /* Mantém o fundo branco */
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
@@ -146,20 +157,43 @@ body {
     display: none;
     z-index: 998;
   }
-  
-  /* Exibe os links quando o menu estiver aberto */
+
+  /* Exibe os links quando o menu estiver aberto e adiciona destaque com sombra */
   .nav-links.mobile-menu-open {
     display: flex;
+    background-color: #fff;
+    /* Fundo branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    /* Sombra para destaque */
   }
-  
-  /* Reduz o tamanho dos links e do botão */
-  .nav-links a,
-  .confirm-button {
-    font-size: 1rem;
+
+  /* Mantém as cores originais para os links e para o botão */
+  .nav-links.mobile-menu-open a,
+  .nav-links.mobile-menu-open .confirm-button {
+    font-size: 1.2rem;
+    /* Ajustado para 1.2rem */
+    color: #333 !important;
+    /* Usa a cor original (#333) */
+    border-color: #333;
   }
 
   /* Adiciona espaçamento superior ao conteúdo principal quando o menu está aberto */
   body.mobile-menu-open {
-    padding-top: 220px; /* Ajuste dependendo da altura da navbar quando aberta */
+    padding-top: 220px;
+    /* Ajuste dependendo da altura da navbar quando aberta */
   }
+}
+
+/* Overlay para escurecer o fundo quando o menu mobile estiver aberto */
+body.mobile-menu-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  /* Ajuste a opacidade conforme desejado */
+  z-index: 990;
+  pointer-events: none;
 }
