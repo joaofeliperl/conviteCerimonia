@@ -35,7 +35,7 @@ function ConfirmPresenceDialog({ onClose }) {
         const message = `Olá, gostaria de informar que ${attendance === "vou" ? "vou" : "não vou"} para o seu casamento\nLista de nomes:\n${namesList.join(", ")}`;
         const encodedMessage = encodeURIComponent(message);
         // Número de WhatsApp: 92991262795
-        const url = `https://wa.me/92991262795?text=${encodedMessage}`;
+        const url = `https://wa.me/92995167293?text=${encodedMessage}`;
         window.open(url, "_blank");
         // Fecha o modal e redireciona para a página inicial com hash #home
         onClose();

@@ -1,0 +1,116 @@
+/* Overlay do diálogo */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Container do diálogo */
+.dialog {
+    background-color: #FFFCF8;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    font-family: 'Lawrence', sans-serif;
+}
+
+/* Título do diálogo */
+.dialog h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #344B68;
+}
+
+/* Parágrafo */
+.dialog p {
+    font-size: 1.4rem;
+    color: #274D66;
+    margin-bottom: 1.5rem;
+}
+
+/* QR Code */
+.qr-code img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Área do link para o Pix */
+.link-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.link-area input {
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.link-area button {
+    padding: 0.5rem 1rem;
+    background-color: #3F6F90;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.link-area button:hover {
+    background-color: #34536f;
+}
+
+/* Botão de fechar o diálogo */
+.dialog-close-button {
+    padding: 0.5rem 1rem;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dialog-close-button:hover {
+    background-color: #bbb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dialog {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .dialog h2 {
+        font-size: 2rem;
+    }
+
+    .dialog p,
+    .link-area input,
+    .link-area button,
+    .dialog-close-button {
+        font-size: 1rem;
+    }
+
+    .qr-code img {
+        width: 150px;
+    }
+}

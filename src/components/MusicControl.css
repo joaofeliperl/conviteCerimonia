@@ -1,0 +1,25 @@
+.music-control {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+}
+
+.music-control-button {
+    padding: 0.5rem 1rem;
+    background-color: #3F6F90;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    /* Visual mais arredondado e minimalista */
+    font-family: 'Lawrence', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.music-control-button:hover {
+    background-color: #34536f;
+    transform: scale(1.05);
+}

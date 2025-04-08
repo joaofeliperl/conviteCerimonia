@@ -1,0 +1,93 @@
+/* Importa a fonte "Lawrence" */
+@font-face {
+    font-family: 'Lawrence';
+    src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.giftlist {
+    background-color: #FFFCF8;
+    /* Mesma cor de fundo do sistema */
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: 'Lawrence', sans-serif;
+}
+
+.giftlist h2 {
+    font-size: 3rem;
+    color: #344B68;
+    margin-bottom: 1.5rem;
+}
+
+.giftlist p {
+    font-size: 1.5rem;
+    color: #274D66;
+    margin-bottom: 2rem;
+}
+
+/* Container para os cards em grid com 3 colunas e espaçamento mais reduzido */
+.gift-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    /* Gap reduzido para deixar os cards mais próximos */
+    justify-items: center;
+}
+
+/* Cada card */
+.gift-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 0.5rem;
+    /* Opcional: um pequeno margin-bottom para separar as linhas */
+}
+
+.gift-card:hover {
+    transform: translateY(-5px);
+}
+
+.gift-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+}
+
+.gift-card h3 {
+    font-size: 1.6rem;
+    color: #344B68;
+    margin-bottom: 1rem;
+}
+
+/* Botão Presentar */
+.present-button {
+    padding: 0.5rem 1rem;
+    background-color: #3F6F90;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.present-button:hover {
+    background-color: #34536f;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .gift-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
