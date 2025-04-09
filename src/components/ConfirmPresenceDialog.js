@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import './ConfirmPresenceDialog.css';
 
 function ConfirmPresenceDialog({ onClose }) {
-    // Estado para armazenar a escolha: "vou" ou "não vou"
     const [attendance, setAttendance] = useState("vou");
     const [nameInput, setNameInput] = useState("");
     const [namesList, setNamesList] = useState([]);
 
-    // Atualiza a escolha de presença e, se for "não vou", limpa os nomes e input.
+
     const handleAttendanceChange = (value) => {
         setAttendance(value);
         if (value === "não vou") {
@@ -16,7 +15,6 @@ function ConfirmPresenceDialog({ onClose }) {
         }
     };
 
-    // Adiciona um nome na lista caso não esteja vazio
     const handleAddName = () => {
         if (nameInput.trim() !== "") {
             setNamesList([...namesList, nameInput.trim()]);
@@ -24,20 +22,16 @@ function ConfirmPresenceDialog({ onClose }) {
         }
     };
 
-    // Remove um nome da lista
     const handleRemoveName = (index) => {
         const newList = namesList.filter((_, i) => i !== index);
         setNamesList(newList);
     };
 
-    // Constrói a mensagem e redireciona para o WhatsApp
     const handleSend = () => {
-        const message = `Olá, gostaria de informar que ${attendance === "vou" ? "vou" : "não vou"} para o seu casamento\nLista de nomes:\n${namesList.join(", ")}`;
+        const message = `Olá, gostaria de informar que ${attendance === "vou" ? "vou" : "não vou"} para o casamento🎉🎉\n\nLista de nomes:\n${namesList.join(", ")}`;
         const encodedMessage = encodeURIComponent(message);
-        // Número de WhatsApp: 92991262795
         const url = `https://wa.me/92995167293?text=${encodedMessage}`;
         window.open(url, "_blank");
-        // Fecha o modal e redireciona para a página inicial com hash #home
         onClose();
         window.location.href = "/conviteCasamento#home";
     };

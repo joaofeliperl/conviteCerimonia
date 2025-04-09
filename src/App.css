@@ -9,13 +9,16 @@
 
 body {
   font-family: 'Montserrat', sans-serif, 'serif', 'Playfair Display';
-  scrollbar-width: none; /* Oculta a barra de rolagem */
-  -ms-overflow-style: none; /* Para o Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Oculta a barra de rolagem */
+  -ms-overflow-style: none;
+  /* Para o Internet Explorer 10+ */
   color: #333;
-  background-color: #fdf8f1; 
+  background-color: #FFFCF8;
   margin: 0;
   padding: 0;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }

@@ -2,6 +2,14 @@ import React from 'react';
 import './Events.css';
 
 function Events() {
+  // Links para pré-preencher o evento no Google Calendar
+  const googleCalendarLinkCerimonia =
+    "https://calendar.google.com/calendar/r/eventedit?text=A%20Cerim%C3%B3nia&dates=20250517T100000/20250517T110000&details=Venha%20celebrar%20conosco%20este%20momento%20especial!&location=8%C2%BA%20Registro%20Civil%2C%20Av.%20Constantino%20Nery%2C%203872%20-%20Chapada";
+
+  const googleCalendarLinkFesta =
+    "https://calendar.google.com/calendar/r/eventedit?text=Festa%20P%C3%B3s%20Cerim%C3%B4nia&dates=20250517T110000/20250517T150000&details=Venha%20curtir%20a%20festa%20no%20La%20Parrilla%20Grill!&location=La%20Parrilla%20Grill%2C%20Franceses%2C%20Av.%20Des.%20Jo%C3%A3o%20Machado%2C%2063%20-%20Alvorada";
+
+
   return (
     <section id="programacao" className="events">
       <h2>Programação</h2>
@@ -41,7 +49,7 @@ function Events() {
               </a>
               {" | "}
               <a
-                href="https://calendar.google.com/calendar/r/eventedit"
+                href={googleCalendarLinkCerimonia}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -53,14 +61,10 @@ function Events() {
 
         {/* Evento: Festa Pós Cerimônia (INVERTIDO: mapa à esquerda, texto à direita) */}
         <div className="event reverse">
-          {/* IMPORTANTE:
-              No HTML, deixamos o texto antes e o mapa depois.
-              A classe .reverse (row-reverse) fará o mapa aparecer à esquerda. */}
-
           {/* Texto (vem primeiro no HTML, mas aparecerá à direita visualmente) */}
           <div className="event-info">
             <h3>Festa Pós Cerimônia</h3>
-            <p className="event-date">17 de Maio de 2025 - 11h30</p>
+            <p className="event-date">17 de Maio de 2025 - 11h00</p>
             <p className="event-address">
               La Parrilla Grill, Franceses <br />
               Av. Des. João Machado, 63 - Alvorada
@@ -89,7 +93,7 @@ function Events() {
               </a>
               {" | "}
               <a
-                href="https://calendar.google.com/calendar/r/eventedit"
+                href={googleCalendarLinkFesta}
                 target="_blank"
                 rel="noopener noreferrer"
               >
