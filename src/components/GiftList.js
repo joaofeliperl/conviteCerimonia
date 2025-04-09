@@ -73,9 +73,9 @@ function GiftList() {
         <section id="giftlist" className="giftlist">
             <h2>Lista de Presentes</h2>
             <p>
-                Aqui você pode ver nossa lista de presentes e colaborar com aquilo
-                que desejamos para nosso novo lar. Agradecemos a sua presença e
-                carinho!
+                Sua presença no nosso casamento já é um presentão… mas se quiser caprichar ainda mais,
+                aceitamos mimos! Preparamos uma listinha com algumas ideias — só pra facilitar, viu?
+                Obrigado por fazer parte dessa festa (e por ajudar a manter os noivos felizes e equipados)!
             </p>
             <div className="gift-cards">
                 {giftItems.map(gift => (
