@@ -28,7 +28,7 @@ function ConfirmPresenceDialog({ onClose }) {
     };
 
     const handleSend = () => {
-        const message = `Olá, gostaria de informar que ${attendance === "vou" ? "vou" : "não vou"} para o casamento🎉🎉\n\nLista de nomes:\n${namesList.join(", ")}`;
+        const message = `Olá, será um prazer prestigiar o casamento de Felipe e Esther, com isso gostaria de confirmar que ${attendance === "vou" ? "vou" : "não vou"} para o casamento🎉🎉\n\nLista de nomes:\n${namesList.join(", ")}`;
         const encodedMessage = encodeURIComponent(message);
         const url = `https://wa.me/92995167293?text=${encodedMessage}`;
         window.open(url, "_blank");

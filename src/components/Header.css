@@ -1,5 +1,3 @@
-/* Importação da fonte "Lawrence" */
-/* Declara a fonte "Lawrence" para uso no projeto, especificando o arquivo e formato */
 @font-face {
   font-family: 'Lawrence';
   src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
@@ -7,74 +5,42 @@
   font-style: normal;
 }
 
-/* Container do header */
-/* Define o estilo geral do header */
 .header {
-  /* Define a cor de fundo como #FFFCF8 */
   background-color: #FFFCF8;
-
-  /* Define a imagem de fundo */
   background-image: url('../assets/images/background.jpg');
   background-repeat: no-repeat;
-  /* Não repete a imagem */
   background-size: cover;
-  /* Cobre todo o espaço, podendo cortar partes da imagem */
   background-position: top center;
-  /* Posiciona a imagem no topo e centralizada horizontalmente */
-
-  /* Define a altura mínima do header como 80% da viewport height (vh) */
   min-height: 80vh;
-
-  /* Remove o padding superior, fazendo com que a imagem inicie bem no topo */
   padding-top: 0;
-
-  /* Centraliza o conteúdo diretamente dentro do header */
   text-align: center;
   position: relative;
-  /* Permite posicionamento relativo de elementos internos, se necessário */
 }
 
-/* Classe .hero */
-/* Define o estilo da área "hero" dentro do header, onde geralmente ficam os textos principais */
 .hero {
-  /* Adiciona um espaço no topo de 250px para empurrar o conteúdo para baixo */
   padding-top: 250px;
-
-  /* Define a fonte a ser utilizada para o texto */
   font-family: 'Lawrence', sans-serif;
-  /* Define a cor do texto */
   color: #274D66;
-  /* Limita a largura máxima do conteúdo a 800px */
   max-width: 800px;
-  /* Centraliza horizontalmente o conteúdo com margem automática */
   margin: 0 auto;
-  /* Centraliza o texto */
   text-align: center;
 }
 
-/* Título dentro da área hero (ex: Felipe & Esther) */
+
 .hero h1 {
   font-size: 5.5rem;
-  /* Define o tamanho da fonte para o título */
   margin: 0;
-  /* Remove margens padrão */
   margin-bottom: 0.5rem;
-  /* Adiciona uma pequena margem inferior */
   color: #344B68;
-  /* Define a cor do título */
 }
 
-/* Subtítulo na área hero (ex: data, local, etc.) */
+
 .hero p {
   margin: 0;
-  /* Remove margens padrão */
   margin-top: 0.5rem;
-  /* Adiciona uma margem superior para separar do título */
   font-size: 1.7rem;
-  /* Define o tamanho da fonte para o subtítulo */
 }
 
-/* Botão de play/pause para a música de fundo */
 .music-toggle-button {
   position: absolute;
   top: 1rem;
@@ -97,101 +63,74 @@
 
 /* ---------------- Responsive ---------------- */
 
-/* Para telas com largura até 1024px */
+
 @media (max-width: 1024px) {
   .hero {
     padding-top: 150px;
-    /* Reduz o padding superior para telas menores */
     max-width: 90%;
-    /* Aumenta a largura disponível para o conteúdo */
   }
 
   .hero h1 {
     font-size: 5rem;
-    /* Reduz o tamanho do título */
   }
 
   .hero p {
     font-size: 1.6rem;
-    /* Reduz um pouco o tamanho do subtítulo */
   }
 
-  /* Ajusta o posicionamento da imagem de fundo para telas menores */
+
   .header {
     background-size: contain;
-    /* Faz com que a imagem se ajuste dentro da tela */
     background-position: top center;
-    /* Mantém a imagem posicionada no topo e centralizada */
   }
 }
 
-/* Para telas com largura até 768px */
 @media (max-width: 768px) {
   .hero {
     padding-top: 120px;
-    /* Ajusta o padding superior para começar mais próximo da navbar */
     max-width: 90%;
-    /* Garante que o conteúdo ocupe a maioria da largura disponível */
   }
 
   .hero h1 {
     font-size: 4.5rem;
-    /* Reduz o tamanho do título para telas menores */
   }
 
   .hero p {
     font-size: 1.4rem;
-    /* Reduz o tamanho do subtítulo */
   }
 
-  /* Ajusta o header para que comece abaixo da navbar */
   .header {
     padding-top: 0;
-    /* Remove espaços desnecessários acima do header */
     background-size: contain;
-    /* Ajusta o tamanho da imagem para que caiba na tela */
     background-position: top center;
-    /* Garante que a imagem fique no topo e centralizada */
   }
 }
 
-/* Para telas com largura até 480px */
+
 @media (max-width: 480px) {
   .hero {
     padding-top: 80px;
-    /* Reduz ainda mais o espaço superior para dispositivos muito pequenos */
     max-width: 95%;
-    /* Usa quase a totalidade da largura da tela */
   }
 
   .hero h1 {
     font-size: 3.5rem;
-    /* Diminui o tamanho do título para melhor visualização em telas pequenas */
   }
 
   .hero p {
     font-size: 1.2rem;
-    /* Reduz o tamanho do subtítulo */
   }
 
-  /* Ajusta o header para remover espaço extra e garantir que a imagem de fundo se ajuste adequadamente */
   .header {
     padding-top: 0;
-    /* Remove o padding superior */
     background-size: contain;
-    /* Faz com que a imagem se ajuste dentro da tela */
     background-position: top center;
-    /* Mantém a imagem no topo e centralizada */
   }
 }
 
-/* --- Ajustes para telas maiores (acima de 1024px) --- */
-/* Reduz a sensação de zoom da imagem de background no header em telas maiores */
 @media (min-width: 1025px) {
   .header {
-    /* Alterado de "cover" para "contain" para exibir a imagem completa sem exagerar no zoom */
     background-size: contain;
-    /* Reduz a altura do header para que o efeito de zoom seja menor */
     min-height: 70vh;
   }
 }

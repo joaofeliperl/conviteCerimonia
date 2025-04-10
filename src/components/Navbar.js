@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ConfirmPresenceDialog from './ConfirmPresenceDialog'; // Importa o modal
+import ConfirmPresenceDialog from './ConfirmPresenceDialog';
 import './Navbar.css';
 
 function Navbar() {
@@ -39,7 +39,6 @@ function Navbar() {
             <a href="#info" onClick={toggleMobileMenu}>Traje</a>
           </li>
           <li>
-            {/* Alterado de link para botão para abrir o modal */}
             <button
               className="confirm-button"
               onClick={() => {

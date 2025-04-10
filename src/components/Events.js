@@ -2,7 +2,6 @@ import React from 'react';
 import './Events.css';
 
 function Events() {
-  // Links para pré-preencher o evento no Google Calendar
   const googleCalendarLinkCerimonia =
     "https://calendar.google.com/calendar/r/eventedit?text=A%20Cerim%C3%B3nia&dates=20250517T100000/20250517T110000&details=Venha%20celebrar%20conosco%20este%20momento%20especial!&location=8%C2%BA%20Registro%20Civil%2C%20Av.%20Constantino%20Nery%2C%203872%20-%20Chapada";
 
@@ -15,9 +14,7 @@ function Events() {
       <h2>Programação</h2>
 
       <div className="events-container">
-        {/* Evento: A cerimônia (texto-esquerda, mapa-direita) */}
         <div className="event normal">
-          {/* Texto */}
           <div className="event-info">
             <h3>A cerimônia</h3>
             <p className="event-date">17 de Maio de 2025 - 10h00</p>
@@ -27,7 +24,6 @@ function Events() {
             </p>
           </div>
 
-          {/* Mapa + Botões */}
           <div className="event-map">
             <iframe
               title="Mapa Registro Civil"
@@ -59,9 +55,7 @@ function Events() {
           </div>
         </div>
 
-        {/* Evento: Festa Pós Cerimônia (INVERTIDO: mapa à esquerda, texto à direita) */}
         <div className="event reverse">
-          {/* Texto (vem primeiro no HTML, mas aparecerá à direita visualmente) */}
           <div className="event-info">
             <h3>Festa Pós Cerimônia</h3>
             <p className="event-date">17 de Maio de 2025 - 11h00</p>
@@ -71,7 +65,6 @@ function Events() {
             </p>
           </div>
 
-          {/* Mapa + Botões (vem depois no HTML, mas aparecerá à esquerda) */}
           <div className="event-map">
             <iframe
               title="Mapa La Parrilla Grill"
@@ -104,7 +97,6 @@ function Events() {
         </div>
       </div>
 
-      {/* Bloco com a nova informação */}
       <div className="event-extra-info">
         <p>O consumo será individual, mas a alegria de tê-los conosco não tem preço!</p>
       </div>

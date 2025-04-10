@@ -1,10 +1,8 @@
-/* Evita overflow horizontal */
 html,
 body {
   overflow-x: hidden;
 }
 
-/* Reset básico para remover margens/paddings padrão */
 * {
   padding: 0;
   box-sizing: border-box;
@@ -15,7 +13,6 @@ body {
   padding: 0;
 }
 
-/* Fonte local para o Navbar */
 @font-face {
   font-family: 'MinhaFonte';
   src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
@@ -23,13 +20,11 @@ body {
   font-style: normal;
 }
 
-/* Barra de navegação principal */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  /* Usa 100vw para garantir que não ultrapasse a viewport */
   z-index: 999;
 
   display: flex;
@@ -42,20 +37,16 @@ body {
   font-family: 'MinhaFonte', sans-serif;
 }
 
-/* Logo */
 .nav-logo {
   font-size: 2rem;
-  /* Mantém o tamanho da logo */
   color: #333;
   white-space: nowrap;
 }
 
-/* Data (oculta por padrão) */
 .nav-date {
   display: none;
 }
 
-/* Lista de links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -63,13 +54,11 @@ body {
   gap: 2rem;
 }
 
-/* Links padrão da Navbar */
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   font-size: 1.4rem;
-  /* Aumentado de 1.2rem para 1.4rem para melhor legibilidade */
   transition: color 0.3s ease;
 }
 
@@ -77,16 +66,13 @@ body {
   color: #666;
 }
 
-/* Botão de confirmação de presença (tamanho reduzido) */
 .confirm-button {
   padding: 0.4rem 0.8rem;
-  /* Padding reduzido */
   border: 2px solid #333;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
   font-size: 1.2rem;
-  /* Fonte reduzida de 1.4rem para 1.2rem */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -95,7 +81,6 @@ body {
   color: #fff;
 }
 
-/* Ícone de menu hamburguer - escondido em telas grandes */
 .mobile-menu-icon {
   display: none;
   flex-direction: column;
@@ -109,27 +94,21 @@ body {
   background-color: #333;
 }
 
-/* Media Query para telas menores */
 @media (max-width: 768px) {
 
-  /* Reduz o padding da navbar para caber melhor na tela */
   .navbar {
     padding: 0.5rem;
     width: 100vw;
-    /* Garante que a navbar não extrapola a largura da viewport */
   }
 
-  /* Reduz o tamanho da logo */
   .nav-logo {
     font-size: 1.8rem;
   }
 
-  /* Exibe o ícone do menu hamburguer */
   .mobile-menu-icon {
     display: flex;
   }
 
-  /* Exibe a data centralizada vertical e horizontalmente */
   .nav-date {
     display: block;
     position: absolute;
@@ -140,16 +119,12 @@ body {
     color: #333;
   }
 
-  /* Ajusta os links para ficarem menores e com menos espaçamento */
   .nav-links {
     position: fixed;
     top: 60px;
-    /* Espaço suficiente para a navbar */
     left: 0;
     width: 100vw;
-    /* Usa 100vw para evitar overflow horizontal */
     background-color: #fff;
-    /* Mantém o fundo branco */
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
@@ -158,35 +133,25 @@ body {
     z-index: 998;
   }
 
-  /* Exibe os links quando o menu estiver aberto e adiciona destaque com sombra */
   .nav-links.mobile-menu-open {
     display: flex;
     background-color: #fff;
-    /* Fundo branco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    /* Sombra para destaque */
   }
 
-  /* Mantém as cores originais para os links e para o botão,
-     com tamanho um pouco menor para dispositivos móveis */
+
   .nav-links.mobile-menu-open a,
   .nav-links.mobile-menu-open .confirm-button {
     font-size: 1.1rem;
-    /* Reduzido de 1.2rem para 1.1rem */
     color: #333 !important;
-    /* Usa a cor original (#333) */
     border-color: #333;
   }
 
-  /* Adiciona espaçamento superior ao conteúdo principal quando o menu está aberto */
   body.mobile-menu-open {
     padding-top: 220px;
-    /* Ajuste dependendo da altura da navbar quando aberta */
   }
 }
 
-/* Overlay para escurecer o fundo quando o menu mobile estiver aberto */
-/* Essa regra será aplicada somente em telas menores */
 @media (max-width: 768px) {
   body.mobile-menu-open::before {
     content: "";
@@ -196,7 +161,6 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.3);
-    /* Ajuste a opacidade conforme desejado */
     z-index: 990;
     pointer-events: none;
   }

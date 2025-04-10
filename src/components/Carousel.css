@@ -1,16 +1,13 @@
 .carousel {
     position: relative;
-    /* Para telas menores (padrão): ocupa 80% da largura com até 800px */
     width: 80%;
     max-width: 800px;
     margin: 2rem auto;
     overflow: hidden;
 }
 
-/* Em telas maiores, reduz um pouco o tamanho do carrossel */
 @media (min-width: 769px) {
     .carousel {
-        /* Ajusta para 60% e max-width de 600px para que fique menor em relação à tela */
         width: 60%;
         max-width: 600px;
     }
@@ -64,10 +61,9 @@
 }
 
 .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0)
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .carousel-button {
         font-size: 1.5rem;

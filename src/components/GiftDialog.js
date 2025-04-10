@@ -3,9 +3,7 @@ import './GiftDialog.css';
 
 function GiftDialog({ gift, onClose }) {
     const [copied, setCopied] = useState(false);
-    // Usa o link específico do presente ou um padrão se não houver
     const giftLink = gift.giftLink || 'https://www.seulink.com/pix';
-    // Se existir a propriedade qrImage, utiliza-a; caso contrário, usa um placeholder
     const qrImage = gift.qrImage || 'https://via.placeholder.com/200?text=QR+Code';
 
     const handleCopy = () => {

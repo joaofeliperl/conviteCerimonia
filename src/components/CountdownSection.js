@@ -15,8 +15,7 @@ function CountdownSection() {
       <p>
         Esperamos por você nesse sonho que tem sido mais inenarrável!
       </p>
-      
-      {/* Componente de contagem regressiva */}
+
       <CountdownTimer targetDate="2025-05-17" />
     </section>
   );

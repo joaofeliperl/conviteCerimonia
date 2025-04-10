@@ -4,12 +4,9 @@ import './Information.css';
 function Information() {
     return (
         <section className="information">
-            {/* Conteúdo já existente */}
             <div className="information-content">
-                {/* Seu conteúdo atual */}
             </div>
 
-            {/* Nova div para a informação de traje */}
             <div id="info" className="information-traje">
                 <h3>Traje</h3>
                 <p>

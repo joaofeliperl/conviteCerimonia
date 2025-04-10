@@ -25,7 +25,6 @@ function App() {
 
   const handleMusicConsent = (consent) => {
     if (consent) {
-      // Se o usuário permitir, iniciamos a reprodução da música
       setMusicPlaying(true);
     }
     setShowMusicConsent(false);

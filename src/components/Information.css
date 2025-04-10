@@ -1,75 +1,47 @@
-/* Declaração da fonte "Lawrence" */
 @font-face {
-    /* Define o nome da fonte para uso no projeto */
     font-family: 'Lawrence';
-    /* Especifica o caminho e o formato do arquivo da fonte */
     src: url('../assets/fonts/FontsFree-Net-lawrence-regular.woff2') format('woff2');
-    /* Define o peso padrão da fonte como normal */
     font-weight: normal;
-    /* Define o estilo padrão da fonte como normal */
     font-style: normal;
 }
 
-/* Estilo principal para a seção de Information */
 .information {
-    /* Define a cor de fundo da seção como #FFFCF8 */
     background-color: #FFFCF8;
-    /* Adiciona um espaçamento interno (padding) de 2rem em todos os lados */
     padding: 2rem;
-    /* Centraliza o texto contido na seção */
     text-align: center;
-    /* Aplica a fonte "Lawrence" para todos os textos dentro da seção */
     font-family: 'Lawrence';
 }
 
-/* Estilo para o conteúdo já existente (se necessário) */
 .information-content {
-    /* Adiciona uma margem inferior de 2rem para separar este conteúdo dos elementos que vêm abaixo */
     margin-bottom: 2rem;
-    /* Garante que o conteúdo utilize a fonte "Lawrence" */
     font-family: 'Lawrence';
 }
 
-/* Estilo para a nova div de traje */
+
 .information-traje {
-    /* Define a mesma cor de fundo (#FFFCF8) para manter a consistência visual */
     background-color: #FFFCF8;
-    /* Aplica um espaçamento interno (padding) de 1.5rem */
     padding: 1.5rem;
-    /* Adiciona uma margem superior de 2rem para separar esta div dos elementos acima */
     margin-top: 2rem;
-    /* Arredonda os cantos da div com um raio de 4px */
     border-radius: 4px;
-    /* Define a fonte "Lawrence" para o conteúdo desta div */
     font-family: 'Lawrence';
 }
 
-/* Título da nova div */
 .information-traje h3 {
-    /* Define o tamanho da fonte do título como 2rem */
     font-size: 2rem;
-    /* Define a cor do texto do título como #344B68 */
     color: #344B68;
-    /* Adiciona uma margem inferior de 1rem para separar o título do parágrafo */
     margin-bottom: 1rem;
-    /* Garante que o título use a fonte "Lawrence" */
     font-family: 'Lawrence';
 }
 
-/* Parágrafo de informações */
+
 .information-traje p {
-    /* Define o tamanho da fonte do parágrafo como 1.5rem */
     font-size: 1.5rem;
-    /* Define a cor do texto do parágrafo como #274D66 */
     color: #274D66;
-    /* Define a altura da linha como 1.4 para melhorar a legibilidade */
     line-height: 1.4;
-    /* Garante que o parágrafo use a fonte "Lawrence" */
     font-family: 'Lawrence';
 }
 
-/* Estilo para as palavras envoltas por <strong> dentro do parágrafo da seção de traje */
+
 .information-traje p strong {
-    /* Define o peso da fonte como bold (negrito) para destacar o texto */
     font-weight: bold;
 }
