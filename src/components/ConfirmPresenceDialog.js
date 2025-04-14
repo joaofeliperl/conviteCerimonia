@@ -6,7 +6,6 @@ function ConfirmPresenceDialog({ onClose }) {
     const [nameInput, setNameInput] = useState("");
     const [namesList, setNamesList] = useState([]);
 
-
     const handleAttendanceChange = (value) => {
         setAttendance(value);
         if (value === "não vou") {
@@ -28,7 +27,12 @@ function ConfirmPresenceDialog({ onClose }) {
     };
 
     const handleSend = () => {
-        const message = `Olá, será um prazer prestigiar o casamento de Felipe e Esther, com isso gostaria de confirmar que ${attendance === "vou" ? "vou" : "não vou"} para o casamento🎉🎉\n\nLista de nomes:\n${namesList.join(", ")}`;
+        let message = "";
+        if (attendance === "vou") {
+            message = `Olá, será um prazer prestigiar o casamento de Felipe e Esther, com isso gostaria de confirmar que vou para o casamento🎉🎉\n\nLista de nomes:\n${namesList.join(", ")}`;
+        } else {
+            message = "Olá! Agradecemos muito o convite, mas infelizmente não poderemos comparecer ao seu dia especial. Desejamos um casamento repleto de amor, alegria e momentos inesquecíveis. Um grande abraço!";
+        }
         const encodedMessage = encodeURIComponent(message);
         const url = `https://wa.me/92995167293?text=${encodedMessage}`;
         window.open(url, "_blank");
@@ -91,7 +95,7 @@ function ConfirmPresenceDialog({ onClose }) {
                         className="send-button"
                         disabled={attendance === "vou" && namesList.length === 0}
                     >
-                        Confirmar Presença
+                        Confirmar
                     </button>
                 </div>
             </div>
