@@ -1,7 +1,7 @@
 {
   "name": "meu-convite",
   "version": "0.1.0",
-  "homepage": "https://joaofeliperl.github.io/conviteCasamento",
+  "homepage": "https://joaofeliperl.github.io/conviteCerimonia",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
