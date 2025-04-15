@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/conviteCerimonia/static/css/main.83ff8cfa.css",
-    "main.js": "/conviteCerimonia/static/js/main.7919f472.js",
+    "main.js": "/conviteCerimonia/static/js/main.8cedb19d.js",
     "static/js/453.2f3e5db2.chunk.js": "/conviteCerimonia/static/js/453.2f3e5db2.chunk.js",
     "static/media/beautifulThings.mp3": "/conviteCerimonia/static/media/beautifulThings.d922d7bc38c5df365a0d.mp3",
     "static/media/imagem3.jpeg": "/conviteCerimonia/static/media/imagem3.76d4aa3ff542a79e99e3.jpeg",
@@ -24,11 +24,11 @@
     "static/media/macarrao.jpeg": "/conviteCerimonia/static/media/macarrao.1d238850b47e0054a23c.jpeg",
     "index.html": "/conviteCerimonia/index.html",
     "main.83ff8cfa.css.map": "/conviteCerimonia/static/css/main.83ff8cfa.css.map",
-    "main.7919f472.js.map": "/conviteCerimonia/static/js/main.7919f472.js.map",
+    "main.8cedb19d.js.map": "/conviteCerimonia/static/js/main.8cedb19d.js.map",
     "453.2f3e5db2.chunk.js.map": "/conviteCerimonia/static/js/453.2f3e5db2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83ff8cfa.css",
-    "static/js/main.7919f472.js"
+    "static/js/main.8cedb19d.js"
   ]
 }
