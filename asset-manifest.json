@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/conviteCerimonia/static/css/main.83ff8cfa.css",
+    "main.js": "/conviteCerimonia/static/js/main.7919f472.js",
+    "static/js/453.2f3e5db2.chunk.js": "/conviteCerimonia/static/js/453.2f3e5db2.chunk.js",
+    "static/media/beautifulThings.mp3": "/conviteCerimonia/static/media/beautifulThings.d922d7bc38c5df365a0d.mp3",
+    "static/media/imagem3.jpeg": "/conviteCerimonia/static/media/imagem3.76d4aa3ff542a79e99e3.jpeg",
+    "static/media/buqueImage.png": "/conviteCerimonia/static/media/buqueImage.11b630e1d453dad2cbf6.png",
+    "static/media/imagem1.jpeg": "/conviteCerimonia/static/media/imagem1.4b19088bedbb4a48becc.jpeg",
+    "static/media/imagem4.jpeg": "/conviteCerimonia/static/media/imagem4.31e6fad9559d857e1bb9.jpeg",
+    "static/media/nazare.png": "/conviteCerimonia/static/media/nazare.45ad0aa21dca8e6386d8.png",
+    "static/media/background.jpg": "/conviteCerimonia/static/media/background.17c9b2e00e1b1c8b6c73.jpg",
+    "static/media/imagem2.jpeg": "/conviteCerimonia/static/media/imagem2.b586aa40a666021979b0.jpeg",
+    "static/media/divino.jpeg": "/conviteCerimonia/static/media/divino.3249e188fbe319cef221.jpeg",
+    "static/media/qrcode4.jpeg": "/conviteCerimonia/static/media/qrcode4.9a57d09ddd195d4f267a.jpeg",
+    "static/media/qrcode5.jpeg": "/conviteCerimonia/static/media/qrcode5.6271e3d2ed27c8226f09.jpeg",
+    "static/media/qrcode6.jpeg": "/conviteCerimonia/static/media/qrcode6.a3347e646f913eb1871b.jpeg",
+    "static/media/inssImage.png": "/conviteCerimonia/static/media/inssImage.beafcff1ae34e4d699ca.png",
+    "static/media/FontsFree-Net-lawrence-regular.woff2": "/conviteCerimonia/static/media/FontsFree-Net-lawrence-regular.a45c6c5a15a64724aa9a.woff2",
+    "static/media/qrcode1.jpeg": "/conviteCerimonia/static/media/qrcode1.f3be95aede149c799111.jpeg",
+    "static/media/qrcode2.jpeg": "/conviteCerimonia/static/media/qrcode2.ac94fe5e0ccc9621ad7a.jpeg",
+    "static/media/qrcode3.jpeg": "/conviteCerimonia/static/media/qrcode3.17b889343539663d6385.jpeg",
+    "static/media/imagem-julios.jpeg": "/conviteCerimonia/static/media/imagem-julios.dec03792c4e6a4ab09f8.jpeg",
+    "static/media/macarrao.jpeg": "/conviteCerimonia/static/media/macarrao.1d238850b47e0054a23c.jpeg",
+    "index.html": "/conviteCerimonia/index.html",
+    "main.83ff8cfa.css.map": "/conviteCerimonia/static/css/main.83ff8cfa.css.map",
+    "main.7919f472.js.map": "/conviteCerimonia/static/js/main.7919f472.js.map",
+    "453.2f3e5db2.chunk.js.map": "/conviteCerimonia/static/js/453.2f3e5db2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83ff8cfa.css",
+    "static/js/main.7919f472.js"
+  ]
+}
