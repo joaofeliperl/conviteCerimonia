@@ -43,6 +43,8 @@ function ConfirmPresenceDialog({ onClose }) {
     return (
         <div className="modal-overlay">
             <div className="modal">
+                {/* Botão minimalista de fechar no canto superior */}
+                <button className="modal-close-button" onClick={onClose}>×</button>
                 <h2>Confirmação de Presença</h2>
                 <div className="attendance-options">
                     <label>
@@ -64,7 +66,6 @@ function ConfirmPresenceDialog({ onClose }) {
                         Não vou
                     </label>
                 </div>
-                {/* Renderiza a área de adicionar nomes apenas se "vou" estiver selecionado */}
                 {attendance === "vou" && (
                     <div className="names-list">
                         <h3>Adicionar Nomes</h3>
@@ -89,7 +90,6 @@ function ConfirmPresenceDialog({ onClose }) {
                     </div>
                 )}
                 <div className="modal-actions">
-                    <button onClick={onClose} className="close-button">Fechar</button>
                     <button
                         onClick={handleSend}
                         className="send-button"
